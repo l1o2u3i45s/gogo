@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello World</title>
+    <link href="../jquery-mobile/jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css">
+    <script src="../jquery-mobile/jquery-1.5.min.js" type="text/javascript"></script>
+    <script src="../jquery-mobile/jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
+    
+    <script>
+	
+	function test(){
+		
+		if((textinput.value =="0918051614" && passwordinput.value =="123456") ||(textinput.value =="0955732733" && passwordinput.value =="123456") ||(textinput.value =="0935514511" && passwordinput.value =="123456")||(textinput.value =="0963538222" && passwordinput.value =="123456")||(textinput.value =="0983726938" && passwordinput.value =="123456")){
+			self.location = 'index.html#client'
+			}
+			
+		else
+		{
+			alert("error")
+			self.location = 'index.html'
+			}
+		
+		}
+	
+	function go(){
+		
+		alert("訂購完成!!")
+		self.location = 'index.html#client'
+		
+		
+		}
+	</script>
+    
+    
+    </head>
+    <body>
+    <div data-role="page" id="page">
+      <div data-role="header">
+        <h1>快 點</h1>
+      </div>
+      
+      <div data-role="fieldcontain">
+        <label for="textinput">手機號碼:</label>
+        <input type="text" name="textinput" id="textinput" value=""  />
+      </div>
+      
+      <div data-role="fieldcontain">
+        <label for="passwordinput">密碼輸入:</label>
+        <input type="password" name="passwordinput" id="passwordinput" value=""  />
+      </div>
+      <br> <br> <br> <br> <br>
+      <div data-role="controlgroup">
+      <a href="#client" data-role="button" onClick="test()">登入</a><br>
+      <a href="#bank" data-role="button">註冊帳號</a></div>
+    </div>
+    
+    <!------------------------------------------------------------->
+    <div data-role="page" id="bank">
+      <div data-role="header">
+        <h1>請選擇銀行</h1>
+      </div>
+     <a href="#regist" data-theme="" id="ventaOption" data-position="fixed">
+      <img src="img/usan.png" width="188" height="87" align="middle"></a>
+          <a href="#regist" data-theme="" id="ventaOption" data-position="fixed">
+     <img src="img/wachi.jpg" width="188" height="87" align="middle"></a>
+     <a href="#regist" data-theme="" id="ventaOption"><img src="img/fubon.jpg" width="188" height="87" align="top"><br/></a>
+
+    </div>
+    <!------------------------------------------------------------->
+    <div data-role="page" id="regist">
+      <div data-role="header">
+        <h1>請登入銀行帳號</h1>
+      </div>
+      <div data-role="fieldcontain">
+        <label for="textinput2">卡號:</label>
+        <input type="text" name="textinput2" id="textinput2" value=""  />
+      </div>
+      <div data-role="fieldcontain">
+        <label for="passwordinput2">密碼:</label>
+        <input type="password" name="passwordinput2" id="passwordinput2" value=""  />
+      </div>
+    <a href="#phoneregist" data-role="button">登入</a> 
+    </div>
+    <!------------------------------------------------------------->
+    <div data-role="page" id="phoneregist">
+      <div data-role="header">
+        <h1>請輸入手機號碼</h1>
+      </div>
+      <div data-role="fieldcontain">
+        <label for="textinput3">手機號碼:</label>
+        <input type="text" name="textinput3" id="textinput3" value=""  />
+      </div>
+      <div data-role="fieldcontain">
+        <label for="passwordinput3">密碼輸入:</label>
+        <input type="password" name="passwordinput3" id="passwordinput3" value=""  />
+      </div>
+      
+<a href="#page" data-role="button" data-rel="popup">確定</a> 
+    
+    </div>
+    <!---------------------------------------------------------------->
+    <div data-role="page" id="client">
+      <div data-role="header">
+        <h1>首頁</h1>
+      </div>
+      <div data-role="controlgroup">
+      <a href="#person" data-role="button">個人資料</a>
+      <a href="#shop" data-role="button">店家資訊</a>
+      <a href="#" data-role="button">我的優惠券</a>
+      <a href="#" data-role="button">優惠券交易網</a>
+      <a href="#" data-role="button">系統設定</a>
+      <a href="#" data-role="button">聯絡我們</a>
+      
+      </div>
+    </div>
+    
+    <!---------------------------------------------------------------->
+    <div data-role="page" id="person">
+      <div data-role="header">
+        <h1>個人資料</h1>
+      </div>
+      <div data-role="content">姓名: 李承穎</div>
+      <div data-role="content">性別: 男</div>
+      <div data-role="content">年齡: 20</div>
+      <div data-role="content">點數: 13</div>
+      <div data-role="content">交易比數: 17</div>
+    </div>
+    
+     <!---------------------------------------------------------------->
+    <div data-role="page" id="shop">
+       <div data-role="header">
+         <h1>店家資訊</h1>
+       </div>
+      <a href="#shopdetail" data-theme="" id="" data-position="fixed">
+      <img src="img/G.jpg" width="210" height="110" align="middle"></a>
+      
+      <a href="#" data-theme="" id="ventaOption" data-position="fixed">
+      <img src="img/11.png" width="210" height="110" align="middle"></a>
+      
+      <a href="#" data-theme="" id="ventaOption" data-position="fixed">
+      <img src="img/22.jpg" width="210" height="110" align="middle">
+      
+      </a><a href="#" data-theme="" id="ventaOption2" data-position="fixed">
+      <img src="img/33.jpg" width="210" height="110" align="middle"></a>
+      
+      <a href="#" data-theme="" id="ventaOption" data-position="fixed">
+      <img src="img/3na.jpg" width="210" height="110" align="middle"></a>
+      
+      <a href="#" data-theme="" id="ventaOption" data-position="fixed">
+      <img src="img/tian.png" width="210" height="110" align="middle"></a>
+     </div>
+     
+     <!---------------------------------------------------------------->
+    <div data-role="page" id="shopdetail">
+       <div data-role="header">
+         <h1>繼光香香雞</h1>
+       </div>
+       <div data-role="controlgroup">
+       <a href="#menu" data-role="button">菜單</a>
+       <a href="#buy" data-role="button">購買</a>
+       <a href="#" data-role="button">購買優惠券</a>
+       </div>
+     </div>
+     
+     <!---------------------------------------------------------------->
+    <div data-role="page" id="menu">
+       <div data-role="header">
+         <h1>菜單</h1>
+       </div>
+       <a href="#" data-theme="" id="ventaOption" data-position="fixed">
+      <img src="img/menu.jpg" width="480" height="363" align="middle"></a>
+     </div>
+     <!--------------------------------------------------------------->
+    <div data-role="page" id="buy">
+       <div data-role="header">
+         <h1>購買</h1>
+       </div>
+       <div data-role="fieldcontain">
+         <label for="textinput4">香香炸雞(小 60元):</label>
+         <input type="text" name="textinput4" id="textinput4" value=""  />
+       </div>
+       <div data-role="fieldcontain">
+         <label for="textinput4">意識墨魚甜不辣(原味 50元):</label>
+         <input type="text" name="textinput4" id="textinput4" value=""  />
+       </div>
+       <div data-role="fieldcontain">
+         <label for="textinput4">鮮炸魷魚(中  65元):</label>
+         <input type="text" name="textinput4" id="textinput4" value=""  />
+       </div>
+       <div data-role="fieldcontain">
+         <label for="textinput4">蒜香杏胞菇:</label>
+         <input type="text" name="textinput4" id="textinput4" value=""  />
+       </div>
+       <div data-role="fieldcontain">
+         <label for="textinput4">雞軟骨串炸(30元/份):</label>
+         <input type="text" name="textinput4" id="textinput4" value=""  />
+       </div>
+       <div data-role="fieldcontain">
+         <label for="textinput4">塔塔樂薯(55元/份):</label>
+         <input type="text" name="textinput4" id="textinput4" value=""  />
+       </div>
+       <div data-role="fieldcontain">
+         <label for="textinput4">水果冰茶(35元/份):</label>
+         <input type="text" name="textinput4" id="textinput4" value=""  />
+       </div>
+       
+
+    <a href="#" data-role="button" onClick="go()" >送出</a> 
+    </div>
+    </body>
+</html>
